@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 // markup
 const IndexPage = () => {
@@ -6,6 +7,8 @@ const IndexPage = () => {
     <main>
       <title>Home Page???</title>
       <h1>Home Page!!!</h1>
+      <Link to="/about">About</Link>
+      <p>I'm making this by following the Gatsby Tutorial.</p>
     </main>
   );
 };
