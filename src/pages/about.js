@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "./layout";
+import Layout from "../components/layout";
 
 function AboutPage() {
   return (
-    <Layout PageTitle="About Me">
+    <Layout pageTitle="About Me">
       <p>
         Hi there! I'm the proud creator of this site, which I built with Gatsby.
       </p>
