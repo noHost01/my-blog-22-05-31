@@ -7,6 +7,8 @@ import CodeBlock from "../../components/CodeBlock";
 import { MDXProvider } from "@mdx-js/react";
 
 const BlogPost = ({ data }) => {
+  const tags = data.mdx.frontmatter.tags;
+
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
@@ -20,9 +22,11 @@ const BlogPost = ({ data }) => {
         </a>
       </p>
       <MDXProvider components={{ pre: CodeBlock }}>
-        //Syntax Highlight 적용될 부분
+        <p>Posted: Syntax Highlight 적용될 부분</p>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </MDXProvider>
+      <hr />
+      TAGS :{tags && tags.join(", ")}
     </Layout>
   );
 };
@@ -42,6 +46,7 @@ export const query = graphql`
             gatsbyImageData
           }
         }
+        tags
       }
     }
   }
